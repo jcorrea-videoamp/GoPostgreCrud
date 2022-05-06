@@ -1,0 +1,25 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "repository",
+    srcs = [
+        "repository.go",
+    ],
+    deps = ["//project/models:models",
+    "@com_github_lib_pq//:pq",
+    "@com_github_jmoiron_sqlx//:sqlx"    
+    ],
+    importpath = "github.com/jcorrea-videoamp/GoPostgreCrud/project/repository",
+    visibility = ["//visibility:public"],
+)
+
+go_test(
+    name = "repository_test",
+    srcs = [
+        "repository_test.go",
+    ],
+    embed = [":repository"],
+    deps = ["//project/models:models",
+    "@com_github_smartystreets_goconvey//convey",
+    "@com_github_zhashkevych_go-sqlxmock//:go-sqlxmock"]
+)

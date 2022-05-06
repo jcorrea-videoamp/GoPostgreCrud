@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "github.com/jcorrea-videoamp/GoPostgreCrud/project/proto";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+service OrderService{
+    rpc ListOrders(google.protobuf.Empty) returns (ListOrderResponse){}
+    rpc UpdateOrder(CreateRequest) returns (AkcnowlegeResponse){}
+    rpc CreateOrder(CreateRequest) returns (AkcnowlegeResponse){}
+    rpc GetOrder(GetRequest) returns (OrderResponse){}
+    rpc DeleteOrder(GetRequest) returns (AkcnowlegeResponse){}
+}
+
+message Order{
+    int32 id = 1;
+    string status = 2;
+    string customer = 3;
+    int32 quantity = 4;
+    float price = 5;
+    google.protobuf.Timestamp createdAt = 6;
+    google.protobuf.Timestamp updatedAt = 7;
+}
+
+message CreateRequest{
+    Order order = 1;
+}
+
+message OrderResponse{
+    Order order = 1;
+}
+
+message ListOrderResponse{
+    repeated Order orders = 1;
+}
+
+message AkcnowlegeResponse{
+    string response = 1;
+}
+
+message GetRequest{
+    int32 id = 1;
+}

@@ -1,0 +1,10 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "models",
+    srcs = [
+        "order.go",
+    ],
+    importpath = "github.com/jcorrea-videoamp/GoPostgreCrud/project/models",
+    visibility = ["//visibility:public"],
+)

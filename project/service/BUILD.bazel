@@ -1,0 +1,29 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "service",
+    srcs = [
+        "service.go",
+    ],
+    deps = ["//project/models:models",
+    "//project/repository:repository",
+    "//project/proto:proto",
+    "@org_golang_google_protobuf//types/known/emptypb",
+    "@org_golang_google_protobuf//types/known/timestamppb"    
+    ],
+    importpath = "github.com/jcorrea-videoamp/GoPostgreCrud/project/service",
+    visibility = ["//visibility:public"],
+)
+
+go_test(
+    name = "service_test",
+    srcs = [
+        "service_test.go",
+    ],
+    embed = [":service"],
+    deps = ["//project/repository:repository",
+    "//project/proto:proto",
+    "@com_github_smartystreets_goconvey//convey",
+    "@com_github_zhashkevych_go-sqlxmock//:go-sqlxmock",
+    "@org_golang_google_protobuf//types/known/timestamppb"]
+)

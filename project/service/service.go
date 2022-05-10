@@ -46,13 +46,13 @@ func (os *orderService) ListOrders(ctx context.Context, void *emptypb.Empty) (*p
 	}, nil
 }
 
-func (os *orderService) CreateOrder(ctx context.Context, req *proto.CreateRequest) (*proto.AkcnowlegeResponse, error) {
+func (os *orderService) CreateOrder(ctx context.Context, req *proto.CreateRequest) (*proto.AcknowlegeResponse, error) {
 	order := protoOrderToRepositoryOrder(req.Order)
 	resp, err := os.repo.CreateOrder(order)
 	if err != nil {
 		return nil, fmt.Errorf("failed to insert order in database: %w", err)
 	}
-	return &proto.AkcnowlegeResponse{
+	return &proto.AcknowlegeResponse{
 		Response: resp,
 	}, nil
 }
@@ -65,17 +65,17 @@ func (os *orderService) GetOrder(ctx context.Context, req *proto.GetRequest) (*p
 	return &proto.OrderResponse{Order: repositoryOrderToProtoOrder(order)}, nil
 }
 
-func (os *orderService) DeleteOrder(ctx context.Context, req *proto.GetRequest) (*proto.AkcnowlegeResponse, error) {
+func (os *orderService) DeleteOrder(ctx context.Context, req *proto.GetRequest) (*proto.AcknowlegeResponse, error) {
 	resp, err := os.repo.DeleteOrder(strconv.Itoa(int(req.GetId())))
 	if err != nil {
 		return nil, fmt.Errorf("failed to remove order from database: %w", err)
 	}
-	return &proto.AkcnowlegeResponse{
+	return &proto.AcknowlegeResponse{
 		Response: resp,
 	}, nil
 }
 
-func (os *orderService) UpdateOrder(ctx context.Context, req *proto.CreateRequest) (*proto.AkcnowlegeResponse, error) {
+func (os *orderService) UpdateOrder(ctx context.Context, req *proto.CreateRequest) (*proto.AcknowlegeResponse, error) {
 	orderID := strconv.Itoa(int(req.Order.Id))
 	updateFields, err := mapUpdateableFields(req.Order)
 	if err != nil {
@@ -85,7 +85,7 @@ func (os *orderService) UpdateOrder(ctx context.Context, req *proto.CreateReques
 	if err != nil {
 		return nil, fmt.Errorf("failed to update order in database: %w", err)
 	}
-	return &proto.AkcnowlegeResponse{
+	return &proto.AcknowlegeResponse{
 		Response: resp,
 	}, nil
 }

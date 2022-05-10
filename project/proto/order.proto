@@ -9,10 +9,10 @@ import "google/protobuf/empty.proto";
 
 service OrderService{
     rpc ListOrders(google.protobuf.Empty) returns (ListOrderResponse){}
-    rpc UpdateOrder(CreateRequest) returns (AkcnowlegeResponse){}
-    rpc CreateOrder(CreateRequest) returns (AkcnowlegeResponse){}
+    rpc UpdateOrder(CreateRequest) returns (AcknowlegeResponse){}
+    rpc CreateOrder(CreateRequest) returns (AcknowlegeResponse){}
     rpc GetOrder(GetRequest) returns (OrderResponse){}
-    rpc DeleteOrder(GetRequest) returns (AkcnowlegeResponse){}
+    rpc DeleteOrder(GetRequest) returns (AcknowlegeResponse){}
 }
 
 message Order{
@@ -37,7 +37,7 @@ message ListOrderResponse{
     repeated Order orders = 1;
 }
 
-message AkcnowlegeResponse{
+message AcknowlegeResponse{
     string response = 1;
 }
 

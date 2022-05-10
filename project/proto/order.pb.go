@@ -262,7 +262,7 @@ func (x *ListOrderResponse) GetOrders() []*Order {
 	return nil
 }
 
-type AkcnowlegeResponse struct {
+type AcknowlegeResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -270,8 +270,8 @@ type AkcnowlegeResponse struct {
 	Response string `protobuf:"bytes,1,opt,name=response,proto3" json:"response,omitempty"`
 }
 
-func (x *AkcnowlegeResponse) Reset() {
-	*x = AkcnowlegeResponse{}
+func (x *AcknowlegeResponse) Reset() {
+	*x = AcknowlegeResponse{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_project_proto_order_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -279,13 +279,13 @@ func (x *AkcnowlegeResponse) Reset() {
 	}
 }
 
-func (x *AkcnowlegeResponse) String() string {
+func (x *AcknowlegeResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*AkcnowlegeResponse) ProtoMessage() {}
+func (*AcknowlegeResponse) ProtoMessage() {}
 
-func (x *AkcnowlegeResponse) ProtoReflect() protoreflect.Message {
+func (x *AcknowlegeResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_project_proto_order_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -297,12 +297,12 @@ func (x *AkcnowlegeResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use AkcnowlegeResponse.ProtoReflect.Descriptor instead.
-func (*AkcnowlegeResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use AcknowlegeResponse.ProtoReflect.Descriptor instead.
+func (*AcknowlegeResponse) Descriptor() ([]byte, []int) {
 	return file_project_proto_order_proto_rawDescGZIP(), []int{4}
 }
 
-func (x *AkcnowlegeResponse) GetResponse() string {
+func (x *AcknowlegeResponse) GetResponse() string {
 	if x != nil {
 		return x.Response
 	}
@@ -390,7 +390,7 @@ var file_project_proto_order_proto_rawDesc = []byte{
 	0x0a, 0x11, 0x4c, 0x69, 0x73, 0x74, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f,
 	0x6e, 0x73, 0x65, 0x12, 0x24, 0x0a, 0x06, 0x6f, 0x72, 0x64, 0x65, 0x72, 0x73, 0x18, 0x01, 0x20,
 	0x03, 0x28, 0x0b, 0x32, 0x0c, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x4f, 0x72, 0x64, 0x65,
-	0x72, 0x52, 0x06, 0x6f, 0x72, 0x64, 0x65, 0x72, 0x73, 0x22, 0x30, 0x0a, 0x12, 0x41, 0x6b, 0x63,
+	0x72, 0x52, 0x06, 0x6f, 0x72, 0x64, 0x65, 0x72, 0x73, 0x22, 0x30, 0x0a, 0x12, 0x41, 0x63, 0x6b,
 	0x6e, 0x6f, 0x77, 0x6c, 0x65, 0x67, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12,
 	0x1a, 0x0a, 0x08, 0x72, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28,
 	0x09, 0x52, 0x08, 0x72, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x1c, 0x0a, 0x0a, 0x47,
@@ -403,11 +403,11 @@ var file_project_proto_order_proto_rawDesc = []byte{
 	0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x40, 0x0a, 0x0b,
 	0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x12, 0x14, 0x2e, 0x70, 0x72,
 	0x6f, 0x74, 0x6f, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
-	0x74, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x41, 0x6b, 0x63, 0x6e, 0x6f, 0x77,
+	0x74, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x41, 0x63, 0x6b, 0x6e, 0x6f, 0x77,
 	0x6c, 0x65, 0x67, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x40,
 	0x0a, 0x0b, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x12, 0x14, 0x2e,
 	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x52, 0x65, 0x71, 0x75,
-	0x65, 0x73, 0x74, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x41, 0x6b, 0x63, 0x6e,
+	0x65, 0x73, 0x74, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x41, 0x63, 0x6b, 0x6e,
 	0x6f, 0x77, 0x6c, 0x65, 0x67, 0x65, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00,
 	0x12, 0x35, 0x0a, 0x08, 0x47, 0x65, 0x74, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x12, 0x11, 0x2e, 0x70,
 	0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x65, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
@@ -415,7 +415,7 @@ var file_project_proto_order_proto_rawDesc = []byte{
 	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x12, 0x3d, 0x0a, 0x0b, 0x44, 0x65, 0x6c, 0x65, 0x74,
 	0x65, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x12, 0x11, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47,
 	0x65, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x2e, 0x41, 0x6b, 0x63, 0x6e, 0x6f, 0x77, 0x6c, 0x65, 0x67, 0x65, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x2e, 0x41, 0x63, 0x6b, 0x6e, 0x6f, 0x77, 0x6c, 0x65, 0x67, 0x65, 0x52, 0x65, 0x73, 0x70,
 	0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x39, 0x5a, 0x37, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62,
 	0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x6a, 0x63, 0x6f, 0x72, 0x72, 0x65, 0x61, 0x2d, 0x76, 0x69, 0x64,
 	0x65, 0x6f, 0x61, 0x6d, 0x70, 0x2f, 0x47, 0x6f, 0x50, 0x6f, 0x73, 0x74, 0x67, 0x72, 0x65, 0x43,
@@ -441,7 +441,7 @@ var file_project_proto_order_proto_goTypes = []interface{}{
 	(*CreateRequest)(nil),         // 1: proto.CreateRequest
 	(*OrderResponse)(nil),         // 2: proto.OrderResponse
 	(*ListOrderResponse)(nil),     // 3: proto.ListOrderResponse
-	(*AkcnowlegeResponse)(nil),    // 4: proto.AkcnowlegeResponse
+	(*AcknowlegeResponse)(nil),    // 4: proto.AcknowlegeResponse
 	(*GetRequest)(nil),            // 5: proto.GetRequest
 	(*timestamppb.Timestamp)(nil), // 6: google.protobuf.Timestamp
 	(*emptypb.Empty)(nil),         // 7: google.protobuf.Empty
@@ -458,10 +458,10 @@ var file_project_proto_order_proto_depIdxs = []int32{
 	5,  // 8: proto.OrderService.GetOrder:input_type -> proto.GetRequest
 	5,  // 9: proto.OrderService.DeleteOrder:input_type -> proto.GetRequest
 	3,  // 10: proto.OrderService.ListOrders:output_type -> proto.ListOrderResponse
-	4,  // 11: proto.OrderService.UpdateOrder:output_type -> proto.AkcnowlegeResponse
-	4,  // 12: proto.OrderService.CreateOrder:output_type -> proto.AkcnowlegeResponse
+	4,  // 11: proto.OrderService.UpdateOrder:output_type -> proto.AcknowlegeResponse
+	4,  // 12: proto.OrderService.CreateOrder:output_type -> proto.AcknowlegeResponse
 	2,  // 13: proto.OrderService.GetOrder:output_type -> proto.OrderResponse
-	4,  // 14: proto.OrderService.DeleteOrder:output_type -> proto.AkcnowlegeResponse
+	4,  // 14: proto.OrderService.DeleteOrder:output_type -> proto.AcknowlegeResponse
 	10, // [10:15] is the sub-list for method output_type
 	5,  // [5:10] is the sub-list for method input_type
 	5,  // [5:5] is the sub-list for extension type_name
@@ -524,7 +524,7 @@ func file_project_proto_order_proto_init() {
 			}
 		}
 		file_project_proto_order_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*AkcnowlegeResponse); i {
+			switch v := v.(*AcknowlegeResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -581,10 +581,10 @@ const _ = grpc.SupportPackageIsVersion6
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type OrderServiceClient interface {
 	ListOrders(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*ListOrderResponse, error)
-	UpdateOrder(ctx context.Context, in *CreateRequest, opts ...grpc.CallOption) (*AkcnowlegeResponse, error)
-	CreateOrder(ctx context.Context, in *CreateRequest, opts ...grpc.CallOption) (*AkcnowlegeResponse, error)
+	UpdateOrder(ctx context.Context, in *CreateRequest, opts ...grpc.CallOption) (*AcknowlegeResponse, error)
+	CreateOrder(ctx context.Context, in *CreateRequest, opts ...grpc.CallOption) (*AcknowlegeResponse, error)
 	GetOrder(ctx context.Context, in *GetRequest, opts ...grpc.CallOption) (*OrderResponse, error)
-	DeleteOrder(ctx context.Context, in *GetRequest, opts ...grpc.CallOption) (*AkcnowlegeResponse, error)
+	DeleteOrder(ctx context.Context, in *GetRequest, opts ...grpc.CallOption) (*AcknowlegeResponse, error)
 }
 
 type orderServiceClient struct {
@@ -604,8 +604,8 @@ func (c *orderServiceClient) ListOrders(ctx context.Context, in *emptypb.Empty, 
 	return out, nil
 }
 
-func (c *orderServiceClient) UpdateOrder(ctx context.Context, in *CreateRequest, opts ...grpc.CallOption) (*AkcnowlegeResponse, error) {
-	out := new(AkcnowlegeResponse)
+func (c *orderServiceClient) UpdateOrder(ctx context.Context, in *CreateRequest, opts ...grpc.CallOption) (*AcknowlegeResponse, error) {
+	out := new(AcknowlegeResponse)
 	err := c.cc.Invoke(ctx, "/proto.OrderService/UpdateOrder", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -613,8 +613,8 @@ func (c *orderServiceClient) UpdateOrder(ctx context.Context, in *CreateRequest,
 	return out, nil
 }
 
-func (c *orderServiceClient) CreateOrder(ctx context.Context, in *CreateRequest, opts ...grpc.CallOption) (*AkcnowlegeResponse, error) {
-	out := new(AkcnowlegeResponse)
+func (c *orderServiceClient) CreateOrder(ctx context.Context, in *CreateRequest, opts ...grpc.CallOption) (*AcknowlegeResponse, error) {
+	out := new(AcknowlegeResponse)
 	err := c.cc.Invoke(ctx, "/proto.OrderService/CreateOrder", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -631,8 +631,8 @@ func (c *orderServiceClient) GetOrder(ctx context.Context, in *GetRequest, opts 
 	return out, nil
 }
 
-func (c *orderServiceClient) DeleteOrder(ctx context.Context, in *GetRequest, opts ...grpc.CallOption) (*AkcnowlegeResponse, error) {
-	out := new(AkcnowlegeResponse)
+func (c *orderServiceClient) DeleteOrder(ctx context.Context, in *GetRequest, opts ...grpc.CallOption) (*AcknowlegeResponse, error) {
+	out := new(AcknowlegeResponse)
 	err := c.cc.Invoke(ctx, "/proto.OrderService/DeleteOrder", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -643,10 +643,10 @@ func (c *orderServiceClient) DeleteOrder(ctx context.Context, in *GetRequest, op
 // OrderServiceServer is the server API for OrderService service.
 type OrderServiceServer interface {
 	ListOrders(context.Context, *emptypb.Empty) (*ListOrderResponse, error)
-	UpdateOrder(context.Context, *CreateRequest) (*AkcnowlegeResponse, error)
-	CreateOrder(context.Context, *CreateRequest) (*AkcnowlegeResponse, error)
+	UpdateOrder(context.Context, *CreateRequest) (*AcknowlegeResponse, error)
+	CreateOrder(context.Context, *CreateRequest) (*AcknowlegeResponse, error)
 	GetOrder(context.Context, *GetRequest) (*OrderResponse, error)
-	DeleteOrder(context.Context, *GetRequest) (*AkcnowlegeResponse, error)
+	DeleteOrder(context.Context, *GetRequest) (*AcknowlegeResponse, error)
 }
 
 // UnimplementedOrderServiceServer can be embedded to have forward compatible implementations.
@@ -656,16 +656,16 @@ type UnimplementedOrderServiceServer struct {
 func (*UnimplementedOrderServiceServer) ListOrders(context.Context, *emptypb.Empty) (*ListOrderResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ListOrders not implemented")
 }
-func (*UnimplementedOrderServiceServer) UpdateOrder(context.Context, *CreateRequest) (*AkcnowlegeResponse, error) {
+func (*UnimplementedOrderServiceServer) UpdateOrder(context.Context, *CreateRequest) (*AcknowlegeResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateOrder not implemented")
 }
-func (*UnimplementedOrderServiceServer) CreateOrder(context.Context, *CreateRequest) (*AkcnowlegeResponse, error) {
+func (*UnimplementedOrderServiceServer) CreateOrder(context.Context, *CreateRequest) (*AcknowlegeResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateOrder not implemented")
 }
 func (*UnimplementedOrderServiceServer) GetOrder(context.Context, *GetRequest) (*OrderResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetOrder not implemented")
 }
-func (*UnimplementedOrderServiceServer) DeleteOrder(context.Context, *GetRequest) (*AkcnowlegeResponse, error) {
+func (*UnimplementedOrderServiceServer) DeleteOrder(context.Context, *GetRequest) (*AcknowlegeResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteOrder not implemented")
 }
 
